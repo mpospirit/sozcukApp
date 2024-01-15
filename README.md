@@ -7,10 +7,9 @@ sözcük.app is a daily word game made with the inspiration of the games like Wo
 Each day, 14 random words with different lengths are chosen from Turkish Language Association's (TDK) dictionary.  
 The goal is to find the words by guessing them.
 
----
-The game is hosted using AWS Elastic Beanstalk.  
-The game uses AWS RDS for the database.
----
+- The game is hosted using AWS Elastic Beanstalk.  
+- The game uses AWS RDS for the database.
+
 
 > I know that the repo is a mess.
 
