@@ -11,6 +11,8 @@ media
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml
 !.elasticbeanstalk/*.global.yml
+sozcukApp/.elasticbeanstalk/
+sozcukApp/.ebextensions/
 
 # Backup files #
 *.bak
