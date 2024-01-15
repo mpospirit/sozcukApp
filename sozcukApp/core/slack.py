@@ -1,6 +1,7 @@
 from slack_sdk import WebClient
+import json
 
-SLACK_TOKEN = "xoxb-5622312647746-5634968381057-Pd7A0aLBJdxtC7xClYzTIdma"
+SLACK_TOKEN = json.load(open("slack_token.json", "r"))["token"]
 
 client = WebClient(token=SLACK_TOKEN)
 

@@ -30,3 +30,6 @@ sozcukApp/sozcukApp/settings.py
 
 # Dashboard #
 dashboard/db_creds.json
+
+# Slack Token #
+sozcukApp/core/slack_token.json
