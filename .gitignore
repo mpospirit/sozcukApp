@@ -33,3 +33,6 @@ dashboard/db_creds.json
 
 # Slack Token #
 sozcukApp/core/slack_token.json
+
+# Profanity Filter #
+sozcukApp/core/bad_words.csv
