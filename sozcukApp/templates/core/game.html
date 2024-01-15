@@ -1,0 +1,144 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="row justify-content-center sefa">
+
+    <div class="col-md-3">
+    </div>
+
+    <div class="col-md-6">
+        <div class="container">
+            <a href="{% url 'core:index' %}">
+                <h1>sözcük<span style="color: #464646; font-weight: normal;">.app
+        </h1></span>
+            </a>
+        </div>
+
+        <div class="container">
+            <div class="col ">
+
+                <div class="container">
+
+                    <div class="row">
+                        <div class="col">
+                            <div id="test1"></div>
+                            <div id="test2"></div>
+                            <div id="test3"></div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <div id="indicator" class="d-flex justify-content-start">Puan</div>
+                        </div>
+                        <div class="col">
+                            <div id="indicator" class="d-flex justify-content-end">Süre</div>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col">
+                            <div id="score" class="d-flex justify-content-start"></div>
+                        </div>
+                        <div class="col">
+                            <div id="feedback" class="d-flex justify-content-center"></div>
+                        </div>
+                        <div class="col">
+                            <div id="timer" class="d-flex justify-content-end"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="row">
+                        <div id="questionScore" class="d-flex justify-content-center"></div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="row">
+                        <div id="answer" class="d-flex justify-content-center"></div>
+                    </div>
+                    <div class="row">
+                        <div class="progressbarWrapper">
+                            <span id="greenBar"></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div id="question" class="d-flex justify-content-center"></div>
+                    </div>
+                    <div class="row">
+                        <div class="progressbarWrapper">
+                            <span id="greenBar"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col d-flex justify-content-end">
+                            <button id="harfAl" onclick="harfAl()">İpucu</button>
+                        </div>
+                        <div class="col d-flex justify-content-center">
+                            <button id="benjamin" onclick="benjamin()">Cevapla</button>
+                        </div>
+                        <div class="col d-flex justify-content-start">
+                            <button id="gonder" onclick="gonder()" disabled>Gönder</button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="container">
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1>sözcük<span style="color: #464646; font-weight: normal;">.app
+                        </h1></span>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="modal-body">
+                                <h1 style="font-size: 2rem;" id="finalMessageToDisplay">Yarışma tamamlandı!</h1>
+                                <p style="margin-bottom: 0;">Puanınız</p>
+                                <p style="font-size: 2rem;" id="finalScoreToDisplay">0</p>
+                                <p>Kullanıcı adını gir,<br>sıralamada yerini al</p>
+
+                                <form method="post">
+                                    {% csrf_token %}
+                                    <input type="text" placeholder="Kullanıcı adı"
+                                    style="width: 100%; border-radius: 500rem; font-size: 1rem;" name="name" required>
+                                    <input type="hidden" name="score" id="scoreInput">
+                                    <button id="benjamin"">Gönder</button>
+                                </form>
+
+                                <h3>Yeni sorular ve cevap anahtarı için yarın gelmeyi unutma!</h3>
+                            </div>
+                            <div class="modal-footer">
+                                <button onclick="window.location.href='{% url 'core:index' %}'">Ana Sayfa</button>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,77 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="row justify-content-center sefa">
+
+        <div class="col-md-3">
+        </div>
+
+        <div class="col-md-6">
+            <div class="container">
+                <a href="{% url 'core:index' %}">
+                    <h1>sözcük<span style="color: #464646; font-weight: normal;">.app
+            </h1></span>
+                </a>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col" style="text-align: justify;">
+                        <h3>Amaç</h3>
+                        <p>Yarışmanın amacı, açıklaması verilmiş olan kelimeleri, en kısa sürede en fazla puanı
+                            toplayarak
+                            bulmaktır.</p>
+                        <h3>Kurallar</h3>
+                        <h5>Süre</h5>
+                        <p>Oyunda toplam 4 dakikalık bir süreye sahipsiniz. Bu süreyi düşünmek ve ipucu almak için
+                            kullanabilirsiniz.</p>
+                        <h5>Soruyu Cevaplama</h5>
+                        <p><span style="color: #892727; font-weight: bold;">Cevapla</span> butonuna bastığınızda süreniz
+                            kısa
+                            bir süreliğine duracaktır. Bu esnada cevabınızı yazıp <span
+                                style="color: #892727; font-weight: bold;">Gönder</span> butonuna basmanız
+                            gerekmektedir. Acele
+                            edin, zira harf kutucuklarının altındaki bar tamamen kırmızı ile dolduğunda ekranda yazılı
+                            olan
+                            harfler cevap olarak kabul edilecek ve bir sonraki soruya geçilecektir.</p>
+                        <h5>İpucu</h5>
+                        <p>İpucu almak için <span style="color: #892727; font-weight: bold;">İpucu</span> butonuna
+                            basmanız
+                            yeterlidir. En fazla, kelimede tahmin edilmesi gereken 2 adet harf kalana kadar ipucu
+                            alabilirsiniz.
+                        </p>
+                        <h5>Puanlama</h5>
+                        <p>Puanlandırma, her doğru tahmin ettiğiniz harf için <b>100 puan</b> olacak şekilde yapılır.
+                        </p>
+                        <p>Örneğin, 5 harfli bir kelime olan <i>KALEM</i>, hiçbir ipucu almadan yapılan bir doğru
+                            tahminde size
+                            5 x 100 = <b>500 Puan</b> kazandıracaktır.</p>
+                        <p>Alınan her ipucu, kelimeden kazanılabilecek puanı <b>100 Puan</b> düşürür. Çünkü ipucu ile
+                            ortaya
+                            çıkarılan her harf, tahmin edilen harf sayısını bir azaltır.</p>
+                        <p>Yanlış cevaplanan sorulardan herhangi bir puan kazanılmamaktadır.</p>
+                        <h5>Oyun Sonu</h5>
+                        <p>Tüm soruları cevapladığınızda veya süreniz sona erdiğinde (henüz cevaplanmamış sorularınız
+                            olsa dahi)
+                            yarışma sona erer.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col d-flex justify-content-center">
+                        <button id="benjamin" style="margin-bottom: 2rem;" onclick="window.location.href='{% url 'core:index' %}';">Geri</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+        </div>
+
+
+    </div>
+{% endblock %}

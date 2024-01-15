@@ -1,0 +1,51 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="row justify-content-center sefa">
+
+    <div class="col-md-3">
+    </div>
+
+    <div class="col-md-6">
+        <div class="container">
+            <a href="{% url 'core:index' %}">
+                <h1>sözcük<span style="color: #464646; font-weight: normal;">.app
+                </h1></span>
+            </a>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h3>Hakkında</h3>
+                    <p style="text-align: center;"><b>sözcük.app</b>, Çağrı Gökpunar tarafından,<br>Melisa Kütük ve Emin
+                        Özata'nın katkılarıyla geliştirilmiştir.</p>
+                    <p style="text-align: center;">
+                        <a href="https://www.cagrigokpunar.xyz" target="_blank" style="color: #892727;">Çağrı
+                            Gökpunar</a><br>
+                        <a href="https://www.linkedin.com/in/melisa-kütük-melisakutuk1999/" target="_blank" style="color: #892727;">Melisa Kütük</a><br>
+                        <a href="https://www.linkedin.com/in/eminozata/" target="_blank" style="color: #892727;">Emin
+                            Özata</a>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col d-flex justify-content-center">
+                    <button id="benjamin" style="margin-bottom: 2rem;"
+                        onclick="window.location.href='{% url 'core:index' %}';">Geri</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+    </div>
+
+
+</div>
+{% endblock %}

@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>sözcük.app</title>
+    <meta name="description" content="Günlük olarak yenilenen kelime bulmacası">
+    <meta name="keywords" content="kelime, bulmaca, oyun, sözcük, sözcük oyunu, sözcük oyunları">
+    <meta name="author" content="Çağrı Gökpunar">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/x-icon" href="{% static 'icon.png' %}">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6092247956108633"
+        crossorigin="anonymous"></script>
+    <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js"
+        data-id="mpospirit" data-description="Support me on Buy me a coffee!"
+        data-message="Oyunun geliştiricisine kahve ısmarlamak ister misiniz?" data-color="#5F7FFF" data-position="Right"
+        data-x_margin="18" data-y_margin="18"></script>
+</head>
+
+<body>
+    {% block content %} {% endblock %}
+    <script>
+        var wordList = JSON.parse('{{ words | escapejs }}');
+        var answer_1 = wordList[0].word;
+        var question_1 = wordList[0].definition;
+        var answer_2 = wordList[1].word;
+        var question_2 = wordList[1].definition;
+        var answer_3 = wordList[2].word;
+        var question_3 = wordList[2].definition;
+        var answer_4 = wordList[3].word;
+        var question_4 = wordList[3].definition;
+        var answer_5 = wordList[4].word;
+        var question_5 = wordList[4].definition;
+        var answer_6 = wordList[5].word;
+        var question_6 = wordList[5].definition;
+        var answer_7 = wordList[6].word;
+        var question_7 = wordList[6].definition;
+        var answer_8 = wordList[7].word;
+        var question_8 = wordList[7].definition;
+        var answer_9 = wordList[8].word;
+        var question_9 = wordList[8].definition;
+        var answer_10 = wordList[9].word;
+        var question_10 = wordList[9].definition;
+        var answer_11 = wordList[10].word;
+        var question_11 = wordList[10].definition;
+        var answer_12 = wordList[11].word;
+        var question_12 = wordList[11].definition;
+        var answer_13 = wordList[12].word;
+        var question_13 = wordList[12].definition;
+        var answer_14 = wordList[13].word;
+        var question_14 = wordList[13].definition;
+    </script>
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+
+</html>

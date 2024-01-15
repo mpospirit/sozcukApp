@@ -1,0 +1,58 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="row justify-content-center sefa">
+    <div class="col-md-3">
+    </div>
+
+    <div class="col-md-6">
+        <div class="container">
+            <a href="{% url 'core:index' %}">
+                <h1>sözcük<span style="color: #464646; font-weight: normal;">.app
+        </h1></span>
+            </a>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <h3 style="margin-top: 2rem;">Günün Yarışmacıları</h3>
+                <table>
+                    <colgroup>
+                        <col span="1" style="width: 5%;">
+                        <col span="1" style="width: 80%;">
+                        <col span="1" style="width: 15%;">
+                    </colgroup>
+
+                    <tbody>
+                        <tr>
+                            <th></th>
+                            <th>İsim</th>
+                            <th>Skor</th>
+                        </tr>
+                        {% for competitor in competitors %}
+                        <tr>
+                            <td>{{ forloop.counter }}</td>
+                            <td>{{ competitor.name }}</td>
+                            <td>{{ competitor.score }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col d-flex justify-content-center">
+                    <button id="benjamin" style="margin-bottom: 2rem;" onclick="window.location.href='{% url 'core:index' %}';">Geri</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="col-md-3">
+    </div>
+</div>
+{% endblock %}

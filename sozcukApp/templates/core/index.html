@@ -1,0 +1,111 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="row justify-content-center sefa">
+    <div class="col-md-3">
+    </div>
+
+    <div class="col-md-6">
+        <div class="container">
+            <img src="{% static 'icon.png' %}" alt="icon"
+                style="margin-left: auto; margin-right: auto; display: block; width: 8rem; margin-top: 2rem;" />
+                <h1>sözcük<span style="color: #464646; font-weight: normal;">.app
+        </h1></span>
+
+            <div class="row">
+                <div class="col d-flex justify-content-center">
+                    <p style="text-align: center;">Günlük olarak yenilenen kelime bulmacası</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col d-flex justify-content-center">
+                    <button id="benjamin" onclick="window.location.href='{% url 'core:game' %}'"
+                        style="margin-bottom: 1rem;">Oyna</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col d-flex justify-content-end">
+                    <button id="harfAl" onclick="window.location.href='{% url 'core:help' %}';">Yardım</button>
+                </div>
+                <div class="col d-flex justify-content-start">
+                    <button id="gonder" onclick="window.location.href='{% url 'core:about' %}'">Hakkında</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <h3 style="margin-top: 2rem;">Bugün Yarışan Kişi Sayısı</h3>
+                <p style="font-size: 2rem; text-align: center;">{{ competitor_count }}</p>
+            </div>
+
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <h3>Günün Liderleri</h3>
+                <table style="margin-bottom: 0rem;">
+                    <colgroup>
+                        <col span="1" style="width: 5%;">
+                        <col span="1" style="width: 80%;">
+                        <col span="1" style="width: 15%;">
+                    </colgroup>
+
+                    <tbody>
+                        <tr>
+                            <th></th>
+                            <th>İsim</th>
+                            <th>Skor</th>
+                        </tr>
+                        {% for competitor in competitors %}
+                        <tr>
+                            <td>{{ forloop.counter }}</td>
+                            <td>{{ competitor.name }}</td>
+                            <td>{{ competitor.score }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <div class="row">
+                <a href="{% url 'core:competitors' %}">
+                    <p style="text-align: center; color: #892727;">Günün tüm yarışmacılarını görüntülemek için tıklayın</p>
+                </a>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <h3>Dünün Cevap Anahtarı</h3>
+                <table>
+                    <colgroup>
+                        <col span="1" style="width: 85%;">
+                        <col span="1" style="width: 15%;">
+                    </colgroup>
+
+                    <tbody>
+                        <tr>
+                            <th>Soru</th>
+                            <th>Cevap</th>
+                        </tr>
+                        {% for word in words_yesterday %}
+                        <tr>
+                            <td>{{ word.definition }}</td>
+                            <td>{{ word.word }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="col-md-3">
+    </div>
+</div>
+{% endblock %}

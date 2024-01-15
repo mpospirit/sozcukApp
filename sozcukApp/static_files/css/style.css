@@ -1,0 +1,288 @@
+/* Body */
+body {
+  font-family: "Trebuchet MS", sans-serif;
+}
+
+p {
+  font-family: "Trebuchet MS", sans-serif;
+}
+
+/* Heading */
+h1 {
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: 2rem;
+  text-align: center;
+  color: #892727;
+  /* bold  */
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+h3 {
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: 1.25rem;
+  text-align: center;
+  color: #892727;
+  /* bold  */
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+h5 {
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: 1rem;
+  color: #464646;
+  font-weight: bold;
+}
+
+table {
+  width: 100%;
+  margin-bottom: 2rem;
+  padding: 1rem;
+}
+
+th {
+  color: #ffffff;
+  background: #464646;
+  padding: 0.5rem;
+}
+
+td {
+  padding: 0.5rem;
+}
+
+tr:nth-child(even) {background-color: #eaeaea;}
+
+/* Input box */
+input[type="text"] {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: #ffeaea;
+  padding: 0.25rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-weight: bold;
+  margin: 0.1rem;
+  width: 1.6rem;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+/* Button */
+button {
+  font-size: 0.75rem;
+  border: none;
+  background-color: #464646;
+  color: #fff;
+  width: 100%;
+  padding: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 500rem;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  background-color: #ce9c9c;
+  color: #000000;
+}
+
+input[type="text"]:disabled {
+  background-color: #cdcdcd;
+  color: #000000;
+  cursor: not-allowed;
+}
+
+
+button:hover {
+  background-color: #892727;
+}
+
+button:disabled {
+  background-color: #cdcdcd;
+  color: #fff;
+  cursor: not-allowed;
+}
+
+#benjamin {
+  background-color: #892727;
+}
+
+#benjamin:hover {
+  background-color: #464646;
+}
+
+#benjamin:disabled {
+  background-color: #cdcdcd;
+  color: #fff;
+  cursor: not-allowed;
+}
+
+/* Score */
+#score {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+/* Feedback */
+#feedback {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+#timer {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+/* Question */
+#question {
+  font-size: 1rem;
+  text-align: center;
+}
+
+#questionScore {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+#indicator {
+  font-size: 1rem;
+}
+
+/* Media queries */
+/* @media screen and (max-width: 30rem) {
+    input[type="text"] {
+      width: 2.5rem;
+    }
+  } */
+
+.progressbarWrapper {
+  height: 0.2rem;
+  width: 100%;
+  display: block;
+  margin: 0.5rem 0;
+  position: relative;
+  background: #cdcdcd;
+  padding-left: 0rem;
+  padding-right: 0rem;
+}
+
+#greenBar {
+  display: block;
+  height: 100%;
+  width: 0rem;
+  background-color: rgb(137, 39, 39);
+  background-image: linear-gradient(center bottom,
+      rgb(43, 194, 83) 37%,
+      rgb(84, 240, 84) 69%);
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  color: white;
+  transition: all 700ms ease;
+}
+
+footer {
+  text-align: center;
+  font-size: 0.75rem;
+  margin-top: 1rem;
+}
+
+/* unvisited link */
+a:link {
+  text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+  text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+  text-decoration: none;
+}
+
+/* selected link */
+a:active {
+  text-decoration: none;
+}
+
+.sefa {
+  width: 100%;
+  margin: auto;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 3rem; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  text-align: center;
+  padding: 0;
+  border: 1px solid #888;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  text-align: center;
+  background-color: #ffffff;
+  color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+  padding: 2px 16px;
+  background-color: #ffffff;
+  color: white;
+}
